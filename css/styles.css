@@ -49,6 +49,10 @@
   background-color: var(--color-primary);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--color-primary);
   font-size: 16px;
@@ -221,6 +225,7 @@ img {
   color: var(--color-heading-title);
   font-size: 24px;
   line-height: 1.333;
+  text-transform: uppercase;
 }
 
 .heading-subtitle {
@@ -229,6 +234,7 @@ img {
   font-size: 36px;
   font-weight: 500;
   line-height: 1.333;
+  text-transform: uppercase;
 }
 
 /* Advantage section */
@@ -272,6 +278,34 @@ img {
 }
 
 /* Features section */
+.features {
+  position: relative;
+}
+
+.features::before {
+  position: absolute;
+  z-index: -1;
+  bottom: 24px;
+  right: 0;
+  width: 600px;
+  height: 160px;
+  background-image: var(--decor-gradient);
+  transform: rotate(180deg);
+  content: '';
+}
+
+.features::after {
+  position: absolute;
+  z-index: -1;
+  bottom: 24px;
+  left: 0;
+  width: 224px;
+  height: 224px;
+  background-image: url('../images/decordots.png');
+  transform: rotate(180deg);
+  content: '';
+}
+
 .features-list {
   display: flex;
   gap: 44px;
